@@ -1,0 +1,40 @@
+@url = http://localhost:3000
+
+### cálculo (rectángulo)
+POST {{url}}/calculos
+Content-Type: application/json
+
+{
+  "base": 10,
+  "altura": 6
+}
+
+### cálculo (cuadrado)
+POST {{url}}/calculos
+Content-Type: application/json
+
+{
+  "base": 7,
+  "altura": 7
+}
+
+### cálculos con datos inválidos 
+POST {{url}}/calculos
+Content-Type: application/json
+
+{
+  "base": 9,
+  "altura": "fff" 
+}
+
+### cálculos con datos inválidos 
+POST {{url}}/calculos
+Content-Type: application/json
+
+{
+  "base": 9,
+  "altura": -4 
+}
+
+### Todoss los cálculos
+GET {{url}}/calculos
