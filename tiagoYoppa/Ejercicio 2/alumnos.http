@@ -1,0 +1,43 @@
+### Crear alumno válido
+POST http://localhost:3001/alumnos
+Content-Type: application/json
+
+{
+  "nombre": "Tiago",
+  "notas": [8, 7, 9]
+}
+
+### Intentar crear alumno repetido
+POST http://localhost:3001/alumnos
+Content-Type: application/json
+
+{
+  "nombre": "Tiago",
+  "notas": [5, 5, 5]
+}
+
+### Crear otro alumno
+POST http://localhost:3001/alumnos
+Content-Type: application/json
+
+{
+  "nombre": "Josefa",
+  "notas": [4, 6, 5]
+}
+
+### Listar todos los alumnos con promedios y estado
+GET http://localhost:3001/alumnos
+
+### Consultar un alumno por nombre
+GET http://localhost:3001/alumnos/Tiago
+
+### Modificar notas de un alumno
+PUT http://localhost:3001/alumnos/Tiago
+Content-Type: application/json
+
+{
+  "notas": [10, 10, 10]
+}
+
+
+
