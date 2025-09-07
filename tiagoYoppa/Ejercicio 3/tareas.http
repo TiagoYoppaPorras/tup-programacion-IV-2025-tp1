@@ -1,0 +1,45 @@
+### Crear tarea
+POST http://localhost:3002/tareas
+Content-Type: application/json
+
+{
+  "nombre": "gym 2hs",
+  "completada": false
+}
+
+### Intentar crear tarea repetida
+POST http://localhost:3002/tareas
+Content-Type: application/json
+
+{
+  "nombre": "gym 2hs",
+  "completada": true
+}
+
+### Crear otra tarea
+POST http://localhost:3002/tareas
+Content-Type: application/json
+
+{
+  "nombre": "trabajar 8hs",
+  "completada": true
+}
+
+### Listar todas las tareas
+GET http://localhost:3002/tareas
+
+### Filtrar tareas completadas
+GET http://localhost:3002/tareas?estado=completadas
+
+### Filtrar tareas pendientes
+GET http://localhost:3002/tareas?estado=pendientes
+
+### Modificar tarea (cambiar estado)
+PUT http://localhost:3002/tareas/gym 2hs
+Content-Type: application/json
+
+{
+  "completada": true
+}
+
+
